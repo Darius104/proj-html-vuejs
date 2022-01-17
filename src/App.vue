@@ -1,23 +1,49 @@
 <template>
   <div id="app">
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <Header :element="headerArray"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import Header from "./components/Header.vue";
 
 export default {
   name: "App",
   components: {
-    HelloWorld,
+    Header,
   },
+  data: function(){
+    return{
+      headerArray: [
+        {
+          name: "Home",
+          active: true,
+        },
+        {
+          name: "Services",
+          active: false,
+        },
+        {
+          name: "About",
+          active: false,
+        },
+        {
+          name: "Blog",
+          active: false,
+        },
+        {
+          name: "Store",
+          active: false,
+        }
+      ]
+    }
+  }
 };
 </script>
 
 <style lang="scss">
 @import './style/reset.scss';
-
+@import '../node_modules/bootstrap';
 
 
 </style>
