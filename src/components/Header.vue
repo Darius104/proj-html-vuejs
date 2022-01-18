@@ -29,6 +29,7 @@ export default {
 <style lang="scss" scoped>
 @import '../style/container.scss';
 @import '../style/color.scss';
+@import '../style/btn.scss';
 
 header{
     width: 100%;
@@ -48,26 +49,28 @@ header{
         margin-left: 5px;
         padding: 4px;
         border-radius: 10%;
+
+        &:hover{
+            cursor: pointer;
+        }
     }
     span{
         margin-left: 40px;
         font-weight: bold;
-    }
-    ._btn{
-        color: $white;
-        display: inline-block;
-        margin-left: 40px;
-        background-color: $semiBlue;
-        padding: 10px;
-        border-radius: 30px;
 
         &:hover{
-            background-color: #ff414b;
             cursor: pointer;
         }
     }
+    ._btn{
+        background-color: $semiBlue;
+    }
     i{
         padding: 0 25px;
+
+        &:hover{
+            cursor: pointer;
+        }
     }
 }
 

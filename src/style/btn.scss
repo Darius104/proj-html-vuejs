@@ -1,0 +1,12 @@
+._btn{
+    color: $white;
+    display: inline-block;
+    margin-left: 40px;
+    padding: 10px;
+    border-radius: 30px;
+
+    &:hover{
+        background-color: #ff414b;
+        cursor: pointer;
+    }
+}
