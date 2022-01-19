@@ -147,7 +147,18 @@ export default {
           testo: "Ac aliquam neque sagittis diam faucibus vitae purus turpis phasellus. Pallentesque consectetur amet purus ultrices mauirs."
         },
         {
-          title: "Recent"
+          title: "RECENT POST",
+          arg_1: "> The best protein shake",
+          arg_2: "> Ultimate cardio workout",
+          arg_3: "> New juices available now",
+          arg_4: "> Tips to find training partners",
+          arg_5: "> 20 best healthy recipes"
+        },
+        {
+          title: "CONTATC INFORMATIONS",
+          location: "4746 Tipple Road Michigan 48449",
+          phone: "Mobile: 1.800.000.0000",
+          email: "Email: info@your-company.com"
         }
       ]
     }
