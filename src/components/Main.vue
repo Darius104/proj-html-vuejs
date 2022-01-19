@@ -140,9 +140,39 @@
         </div>
 
         <div class="last-jambo">
-            <div class="jambo-text">
-                <h2>"I've faild over and over again in my <br> life. And that is why I succeed."</h2>
-                <p>Arcu auctor gravida nisl, congue sit nisi tincidunt eget proin. in lacinia lacus donec sed massa in ipsum eros, tristique. Gravida suspendisse etiam in iaculis</p>
+            <div class="linear">
+                <div class="jambo-text">
+                    <h2>"I've faild over and over again in my <br> life. And that is why I succeed."</h2>
+                    <p>Arcu auctor gravida nisl, congue sit nisi tincidunt eget proin. in lacinia lacus donec sed massa <br> in ipsum eros, tristique. Gravida suspendisse etiam in iaculis</p>
+                    <div class="_btn">Buy Avada today</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="_container">
+            <div class="row text-center">
+                <div class="col-3" v-for="(elem, index) in gym" :key="index">
+                    <div class="card-gym">
+                        <img :src="elem.image" alt="">
+                        <p>
+                            {{elem.text}}
+                        </p>
+                        <span>{{elem.last}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="ultim-jambo">
+            <div class="linear">           
+                <div class="text">
+                    <div class="play">
+                        <i class="fas fa-play"></i>
+                    </div>
+                    <h2>Crossfit workout of the day</h2>
+                    <h3>November 15th, 2019</h3>
+                    <span>View all videos</span>
+                </div>
             </div>
         </div>
     </main>
@@ -155,7 +185,8 @@ export default {
         element: Array,
         playlist: Array,
         subscribe: Array,
-        buy: Array
+        buy: Array,
+        gym: Array
     }
 }
 </script>
@@ -171,6 +202,7 @@ export default {
     background-image: url('../assets/slider.jpg');
     background-repeat: no-repeat;
     background-size: 100%;
+    margin-top: 100px;
 
     .jumbo-texts{
         height: 700px;
@@ -485,6 +517,95 @@ export default {
         span{
             margin-left: 20px;
         }
+    }
+}
+
+.last-jambo{
+    background-image: url('../assets/banner2-2x.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 700px;
+
+    .linear{
+        background: linear-gradient(to top, #010014, #04022c11);
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        h2{
+            color: white;
+            font-size: 50px;
+            margin-bottom: 40px;
+        }
+        p{
+            color: white;
+            font-size: 20px;
+            margin-bottom: 40px;
+        }
+        ._btn{
+            background-color: $semiBlue;
+            padding: 15px 35px;
+            font-weight: bold;
+
+            &:hover{
+                background-color: #ff414b;
+            }
+        }
+    }
+}
+.card-gym{
+    margin-top: 120px;
+
+    img{
+        margin-bottom: 30px;
+    }
+    p{
+        margin-bottom: 20px;
+    }
+    span{
+        font-weight: bold;
+    }
+}
+
+.ultim-jambo{
+    height: 700px;
+    background-image: url('../assets/banner14-2x.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    .linear{
+        background: linear-gradient(300deg, rgba(63, 9, 9, 0.815), rgba(8, 8, 122, 0.794));
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .text{
+            text-align: center;
+            .play{
+                background-color: $white;
+                display: inline-block;
+                padding: 35px 40px;
+                border-radius: 100%;
+                margin-bottom: 50px;
+            }
+            h2{
+                color: $white;
+                font-size: 50px;
+            }
+            h3{
+                color: $yellow;
+                font-size: 30px;
+            }
+            span{
+                color: $white;
+                font-weight: bold;
+                font-size: 20px;
+            }
+        }        
     }
 }
 </style>

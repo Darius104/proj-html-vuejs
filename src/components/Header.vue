@@ -34,10 +34,13 @@ export default {
 header{
     width: 100%;
     height: 100px;
+    top: 0;
     background-color: black;
     color: $gray;
     display: flex;
     align-items: center;
+    position: fixed;
+    z-index: 10;
 
     .active{
         color: $white;
