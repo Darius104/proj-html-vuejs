@@ -27,9 +27,11 @@
                 <div class="container-challenge-card">
                     <div class="challenge-card" v-for="(el, index) in element" :key="index">
                         <img class="challenge-img" :src="el.image" alt="">
-                        <div class="challenge-card-text">
-                            <h2>{{el.title}}</h2>
-                            <h3>{{el.subtitle}}</h3>
+                        <div class="linear">
+                            <div class="challenge-card-text">
+                                <h2>{{el.title}}</h2>
+                                <h3>{{el.subtitle}}</h3>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -209,6 +211,7 @@ export default {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        background-image: linear-gradient( to right, #060608 0%, #060608 45%, #060608 15%, #06060800 100%);
 
         #firstSpan{
             color: #ff414b;
@@ -273,6 +276,15 @@ export default {
         top: -60px;
         width: 30%;
         margin: auto;
+
+        .linear{
+            background-image: linear-gradient( to top, #060608 0%, #060608 15%, #060608 15%, #06060800 100%);
+            width: 100%;
+            height:  100px;
+            position: absolute;
+            bottom: 0;
+            border-radius: 5px 5px 40px 5px;
+        }
 
         .challenge-img{
             width: 100%;
@@ -424,6 +436,7 @@ export default {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        background-image: linear-gradient( to right, #060608 0%, #060608 45%, #060608 15%, #06060800 100%);
 
         span{
             color: #ff414b;

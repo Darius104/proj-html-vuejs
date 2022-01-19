@@ -139,6 +139,16 @@ export default {
           text: "Proin in viverra maecenas et mattis un nibh enim. Gravida ultricies mi porta lacus. Et posuere velit sed nec eleifend",
           last: "Visit Power Gym >"
         }
+      ],
+
+      footerArray: [
+        {
+          image: require('./assets/logo.png'),
+          testo: "Ac aliquam neque sagittis diam faucibus vitae purus turpis phasellus. Pallentesque consectetur amet purus ultrices mauirs."
+        },
+        {
+          title: "Recent"
+        }
       ]
     }
   }
@@ -147,7 +157,7 @@ export default {
 
 <style lang="scss">
 @import './style/reset.scss';
-@import '../node_modules/bootstrap';
+@import '~bootstrap/scss/bootstrap.scss';
 
 
 </style>

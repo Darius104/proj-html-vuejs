@@ -1,10 +1,12 @@
 <template>
     <footer>
-        <div class="top">
+        <div class="_container">
+            <div class="top">
 
-        </div>
-        <div class="bottom">
+            </div>
+            <div class="bottom">
 
+            </div>
         </div>
     </footer>
 </template>
@@ -19,12 +21,14 @@ export default {
     footer{
         background-color: black;
         
-        .top{
-            height: 600px;
-            border-bottom: 1px solid gray;
-        }
-        .bottom{
-            height: 100px;
+        ._container{
+            .top{
+                height: 500px;
+                border-bottom: 1px solid gray;
+            }
+            .bottom{
+                height: 100px;
+            }
         }
     }
 </style>
