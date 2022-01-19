@@ -1,9 +1,11 @@
 <template>
     <main>
+        <!-- parte iniziale del main -->
         <div class="jumbo-img">
             <div class="_container">
                 <div class="row">
                     <div class="col-10">
+                        <!-- container testo del jumbo -->
                         <div class="jumbo-texts">
                             <span id="firstSpan">Certified fitness professional</span>
                             <h1>Take control of your health</h1>
@@ -14,6 +16,7 @@
                             </div>
                         </div>
                     </div>
+                    <!-- colonna play -->
                     <div class="col-2 play">
                         <div class="tasto">
                             <i class="fas fa-play"></i>
@@ -22,9 +25,13 @@
                 </div>
             </div>
         </div>
+        <!-- parte sotto jumbotron -->
         <div class="challenge-bk">
             <div class="_container">
                 <div class="container-challenge-card">
+                    <!-- vado a fare un v-for per ogni elemento dell'array in App.vue e vado a popolare
+                        dinamicamente il tutto.
+                     -->
                     <div class="challenge-card" v-for="(el, index) in element" :key="index">
                         <img class="challenge-img" :src="el.image" alt="">
                         <div class="linear">
@@ -49,13 +56,16 @@
                 </div>
             </div>
         </div>
+        <!-- parte di sponsorizzazione YouTube -->
         <div class="section-container">
             <div class="row">
+                <!-- colonna sinistra -->
                 <div class="col-6">
                     <div class="card-left-training">
                         <img class="training" src="../assets/service15-2x.jpg" alt="">
                     </div>
                 </div>
+                <!-- colonna destra -->
                 <div class="col-6">
                     <div class="card-right-training">
                         <span id="firstSpan">Tune up your workouts</span>
@@ -74,7 +84,7 @@
                 </div>
             </div>
         </div>
-
+        <!-- inizio creazione di playlist -->
         <div class="_container">
             
             <div class="row">
@@ -85,7 +95,9 @@
                     <span>View all videos ></span>
                 </div>
             </div>
-
+            <!-- vado a fare un v-for per ogni elemento dell'array in App.vue e vado a popolare
+                dinamicamente il tutto.
+            -->
             <div class="featured-playlist">
                 <div class="card-playlist" v-for="(el, index) in playlist" :key="index">
                     <img class="playlist-image" :src="el.image" alt="">
@@ -96,7 +108,7 @@
                 </div>
             </div>
         </div>
-
+        <!-- sezione email -->
         <div class="jambo-subscribe">
             <div class="_container">
                 <div class="text-subscribe">
@@ -115,7 +127,9 @@
                 </div>
             </div>
         </div>
-
+        <!-- vado a fare un v-for per ogni elemento dell'array in App.vue e vado a popolare
+            dinamicamente il tutto.
+        -->
         <div class="cards-subscribe-container">
             <div class="_container">
                 <div class="card-subscribe" v-for="(ele, index) in subscribe" :key="index">
@@ -126,12 +140,15 @@
                 </div>
             </div>
         </div>
-
+        <!-- sezione bevande -->
         <div class="_container">
             <div class="title-subscribe">
                 <h4>Latest articles</h4>
                 <h5>Read all aricles ></h5>
             </div>
+            <!-- vado a fare un v-for per ogni elemento dell'array in App.vue e vado a popolare
+                dinamicamente il tutto.
+            -->
             <div class="container-cards-subscribe">
                 <div class="card-buy" v-for="(e, index) in buy" :key="index">
                     <img :src="e.image" alt="">
@@ -140,7 +157,7 @@
                 </div>
             </div>
         </div>
-
+        <!-- sezione motivazione -->
         <div class="last-jambo">
             <div class="linear">
                 <div class="jambo-text">
@@ -150,8 +167,11 @@
                 </div>
             </div>
         </div>
-
+        <!-- sezione palestre -->
         <div class="_container">
+            <!-- vado a fare un v-for per ogni elemento dell'array in App.vue e vado a popolare
+                dinamicamente il tutto.
+            -->
             <div class="row text-center">
                 <div class="col-3" v-for="(elem, index) in gym" :key="index">
                     <div class="card-gym">
@@ -164,7 +184,7 @@
                 </div>
             </div>
         </div>
-
+        <!-- sezione ultimo jambo "appuntamento" -->
         <div class="ultim-jambo">
             <div class="linear">           
                 <div class="text">
@@ -194,6 +214,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+// import
 @import '../style/container.scss';
 @import '../style/color.scss';
 @import '../style/btn.scss';
